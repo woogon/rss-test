@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  shutdown: graceful
+  servlet:
+    context-path: /
+    encoding:
+      enabled: true
+      charset: UTF-8
+
+spring:
+  application:
+    name: rclab-test
+
+springdoc:
+  version: '@project.version@'
+  api-docs:
+    path: /api-docs
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  swagger-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+    path: /swagger-ui.html
+    disable-swagger-default-url: true
+    display-query-params-without-oauth2: true
+#  paths-to-match:
+#    - /api/v1/**
+#    - /test/**
